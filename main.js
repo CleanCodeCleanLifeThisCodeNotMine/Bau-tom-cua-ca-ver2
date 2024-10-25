@@ -72,7 +72,7 @@ class Game {
         this.updateScoreDisplay();
 
         if (winnings > 0) {
-            document.getElementById('result').innerHTML += `<br>Chúc mừng! Bạn đã thắng ${winnings} điểm!`;
+            document.getElementById('result').innerHTML += `<br>Chúc mừng! Bạn đã thắng ${winnings - 1000} điểm!`;
         } else {
             document.getElementById('result').innerHTML += "<br>Rất tiếc! Bạn đã thua!";
         }

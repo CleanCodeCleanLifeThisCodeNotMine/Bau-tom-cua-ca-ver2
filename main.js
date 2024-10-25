@@ -31,12 +31,7 @@ class Game {
         }
 
         // Xoá giá trị trong tất cả các ô cược sau khi quay
-        document.getElementById('bauBet').value = '';
-        document.getElementById('tomBet').value = '';
-        document.getElementById('cuaBet').value = '';
-        document.getElementById('caBet').value = '';
-        document.getElementById('meoBet').value = '';
-        document.getElementById('naiBet').value = '';
+        this.clearAllBets();
 
         // Quay kết quả
         let result1 = this.getRandomChoice();
@@ -82,6 +77,28 @@ class Game {
             document.getElementById('result').innerHTML += "<br>Rất tiếc! Bạn đã thua!";
         }
     }
+
+    // Phương thức xoá tất cả các cược
+    clearAllBets() {
+        document.getElementById('bauBet').value = '';
+        document.getElementById('tomBet').value = '';
+        document.getElementById('cuaBet').value = '';
+        document.getElementById('caBet').value = '';
+        document.getElementById('meoBet').value = '';
+        document.getElementById('naiBet').value = '';
+    }
+}
+
+// Thêm điểm vào một ô cược
+function addBet(betId) {
+    let betInput = document.getElementById(betId);
+    let currentBet = parseInt(betInput.value) || 0;
+    betInput.value = currentBet + 1000;
+}
+
+// Xoá giá trị cược trong một ô
+function clearBet(betId) {
+    document.getElementById(betId).value = '';
 }
 
 // Khởi tạo game khi trang tải
@@ -89,6 +106,6 @@ const game = new Game();
 game.updateScoreDisplay();
 
 // Gắn sự kiện click vào nút quay
-document.querySelector('button').addEventListener('click', function() {
+document.getElementById('spinButton').addEventListener('click', function() {
     game.playGame();
 });

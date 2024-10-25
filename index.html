@@ -18,26 +18,38 @@
     <div class="item">
         <img id="bau" src="bau.png" alt="Bầu">
         <br><input type="number" id="bauBet" placeholder="Cược Bầu">
+        <br><button onclick="addBet('bauBet', 1000)">+1000</button>
+        <button onclick="clearBet('bauBet')">Xóa</button>
     </div>
     <div class="item">
         <img id="tom" src="tom.png" alt="Tôm">
         <br><input type="number" id="tomBet" placeholder="Cược Tôm">
+        <br><button onclick="addBet('tomBet', 1000)">+1000</button>
+        <button onclick="clearBet('tomBet')">Xóa</button>
     </div>
     <div class="item">
         <img id="cua" src="cua.png" alt="Cua">
         <br><input type="number" id="cuaBet" placeholder="Cược Cua">
+        <br><button onclick="addBet('cuaBet', 1000)">+1000</button>
+        <button onclick="clearBet('cuaBet')">Xóa</button>
     </div>
     <div class="item">
         <img id="ca" src="ca.png" alt="Cá">
         <br><input type="number" id="caBet" placeholder="Cược Cá">
+        <br><button onclick="addBet('caBet', 1000)">+1000</button>
+        <button onclick="clearBet('caBet')">Xóa</button>
     </div>
     <div class="item">
         <img id="meo" src="meo.png" alt="Mèo">
         <br><input type="number" id="meoBet" placeholder="Cược Mèo">
+        <br><button onclick="addBet('meoBet', 1000)">+1000</button>
+        <button onclick="clearBet('meoBet')">Xóa</button>
     </div>
     <div class="item">
         <img id="nai" src="nai.png" alt="Nai">
         <br><input type="number" id="naiBet" placeholder="Cược Nai">
+        <br><button onclick="addBet('naiBet', 1000)">+1000</button>
+        <button onclick="clearBet('naiBet')">Xóa</button>
     </div>
 </div>
 
@@ -46,4 +58,13 @@
 <div id="result"></div>
 
 </body>
+<script>
+    function checkAge() {
+        let isConfirmed = confirm("Bạn đã đủ 18 tuổi chưa? Nhấn Ok nếu bạn đã đủ");
+        if (!isConfirmed) {
+            window.location.href = "https://youtu.be/fwCDaowR1nE";
+        }
+    }
+    window.onload = checkAge;
+</script>
 </html>
